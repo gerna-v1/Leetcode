@@ -8,7 +8,7 @@ public:
         std::unordered_set<int> set;
 
         for (int num : nums) {
-            if (set.find(num) != set.end()) {
+            if (set.find(num) == set.end()) {
                 set.insert(num);
                 continue;
             }
@@ -26,12 +26,9 @@ int main()
     std::vector<int> test = std::vector<int>();
 
     test.push_back(1);
-    test.push_back(1);
-    test.push_back(1);
-    test.push_back(3);
+    test.push_back(2);
     test.push_back(3);
     test.push_back(4);
-    test.push_back(3);
 
     std::cout << solution.containsDuplicate(test) << std::endl;
 }
